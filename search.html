@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Search the Library of Babel</title>
+    <link rel="stylesheet" type="text/css" href="/text.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <meta name="description" content="Search the texts of the Library of Babel. Infinite, or at least indefinite, possibilities.">
+    <meta name="author" content="Jonathan Basile and Jorge Luis Borges">
+    <meta name="keywords" content="library of babel, Jorge Luis Borges, universal library">
+    <meta charset="UTF-8">
+    <style>
+        .searchcontainer2 {
+            margin-bottom: 30px;
+        }
+        #searchResults {
+            margin-top: 20px;
+            padding: 20px;
+        }
+    </style>
+<script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(document.getElementById('searcher'));
+
+        // Clear previous search results (if any)
+        document.getElementById('searchResults').innerHTML = '';
+
+        fetch('http://127.0.0.1:5000/search', {  
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Insert the HTML response in between the search button and the back to portal button
+            document.getElementById('searchResults').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('searchResults').innerHTML = 'An error occurred while searching.';
+        });
+    }
+
+    function submitter(event) {
+        if (event.keyCode === 13 && event.ctrlKey) {
+            document.getElementById('searcher').submit();
+        }
+    }
+
+    function clearout() {
+        document.getElementById('searchResults').innerHTML = '';
+    }
+</script>
+
+</head>
+<body>
+    <div class="searchcontainer2" style="position: relative; top:75px;">
+        <div id="divider" style="position: relative; top: 5px">
+            <form id="searcher" onsubmit="handleFormSubmit(event)">
+                <p class="textsearch">Enter up to 3200 characters:<br><br>
+                    <textarea style="width: 300px; height: 125px; font-size:14px; font-family: Courier" maxlength="3200" id="find" name="find" onkeypress="submitter(event)" onkeyup="clearout()" autofocus></textarea>
+                </p>
+                <p class="textsearch" style="width:500px; position: relative; margin-right: auto; margin-left: auto; top:-10px;" id="advice">The library contains only lower-case letters, space, comma, and period.</p>
+                <p id="image" style="text-align: center; position: relative;">
+                    <input id="button" style="width: 100px; position: relative; top:-10px;" class="btn" type="submit" value="Search" name="btnSubmit"><br>
+                    <input type="hidden" name="method" value="x">
+                </p>
+            </form>
+
+            <p id="link" style="position: relative; top:-10px; text-align: center; left:1px; font-size: 17; font-family: 'Courier', monospace">
+                <a style="font-family: 'Courier', monospace" class="intext" href="https://libraryofbabel.info">Back to Portal</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="searchResults"></div>
+</body>
+</html>

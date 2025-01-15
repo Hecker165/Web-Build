@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <meta charset="UTF-8">
+        <TITLE>Image Search</TITLE>
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn:400italic,400,700" rel="stylesheet" type="text/css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="/babelia/babelia.css">
+            <LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.png">
+                <script src="/babelia/searchhtml.js" type="text/javascript"></script>
+                <meta name="description" content="Search the Library of Babel's Image Archives for any possible permutation of pixels.">
+                    <meta name="author" content="Jonathan Basile">
+                            </HEAD>
+    <BODY>
+        <div class = "search">
+            
+            <form ACTION = "/imagesearch.cgi" enctype="multipart/form-data" method="post" name="file" id = "img">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="15728640">
+                <b>Upload Image File:</b>&nbsp;&nbsp;&nbsp; <input type = "file" name = "title" id ="filename"><br><br>
+                   <!--SPAN>- Or -</SPAN><br><br>
+                    <b>enter URL:</b> &nbsp;&nbsp;&nbsp;<input type = "text" name = "URL" id = "address" style = "width: 12em"-->
+                        <br><br><input type = "submit" value = "Submit" style = "width: 7em">&nbsp;&nbsp;&nbsp;&nbsp;<button type = "reset" style = "width:7em">Reset</button><br><br>
+                      <SPAN id="first" style = "cursor:pointer;"><img src = "https://babelia.libraryofbabel.info/img/downarrow.png" alt = "arrow pointing downward. Click for more search options">Search Options<img src = "https://babelia.libraryofbabel.info/img/downarrow.png" alt = "arrow pointing downward. Click for more search options"></SPAN>
+                      <a href = "https://babelia.libraryofbabel.info"><img id = "home" src = "https://babelia.libraryofbabel.info/img/homeb.png" alt = "Home icon. click to return home." style = "position:absolute; right:155px; margin-top:-6px"></a><br><br>
+                            <div id ="options">
+                       <b>Orientation</b><input type = "radio" name = "flip" value = "a" checked="checked">Automatic<input type = "radio" name = "flip" value = "l">Landscape<input type = "radio" name = "flip" value = "p">Portrait<br><br>
+                                <b>Canvas Fill</b> <input type = "radio" name = "fill" value = "b" checked="checked">bars (retain proportions)<input type = "radio" name = "fill" value = "s">stretch (640 x 416)<br><br>
+                                    <b>Frame #</b> <input type = "text" maxlength = "6" name = "frame" value = "1" style = "width: 25px"> (for files with multiple frames, e.g. animations)<br><br>
+                                        <b>Border Color</b> (if retaining proportions)<br> Select: <select name = "color"><option value = "#222">Grey</option><option value = "black">Black</option><option value = "white">White</option><option value = "random">Piebald</option><option value = "red">Red</option><option value = "green">Green</option><option value = "blue">Blue</option><option value = "yellow">Yellow</option><option value = "orange">Orange</option><option value = "purple">Purple</option></select> Or enter a 12-bit value (000-FFF) #<input type = "text" maxlength = "3" name = "colortext" style = "width: 19px;"><br><br></div>
+            </form>
+            </div>
+    </BODY>
+</HTML>

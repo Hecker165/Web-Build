@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content-container"></div>  <!-- Container for injected HTML -->
+
+    <script>
+        // Fetch the current URL and extract the path
+        const url = window.location.href;
+        const path = new URL(url).pathname;
+
+        // Send the path to the /book route in your Flask app as a GET request
+        fetch(`http://127.0.0.1:5000/book?path=${encodeURIComponent(path)}`, {
+            method: 'GET', // Using GET method
+        })
+        .then(response => response.text())
+        .then(html => {
+            // Create a temporary div to hold the injected HTML
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            // Append the content to the container
+            const contentContainer = document.getElementById('content-container');
+            contentContainer.innerHTML = tempDiv.innerHTML;
+
+            // If the response contains any scripts, execute them
+            const scripts = tempDiv.querySelectorAll('script');
+            scripts.forEach(script => {
+                const newScript = document.createElement('script');
+                newScript.innerHTML = script.innerHTML;
+                document.body.appendChild(newScript); // Execute the script
+            });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    </script>
+</body>
+</html>

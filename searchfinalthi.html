@@ -1,0 +1,29 @@
+
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        
+        <TITLE>Search the Library of Babel</TITLE>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="/text.css">
+            <SCRIPT TYPE="text/javascript" SRC="/js/search.js"></SCRIPT>
+            <LINK REL="shortcut icon" TYPE="image/x-icon" HREF="/favicon.png">
+                <meta name="description" content="Search the texts of the Library of Babel. Infinite, or at least indefinite, possibilities.">
+                    <meta name="author" content="Jonathan Basile and Jorge Luis Borges">
+                        <meta name="keywords" content = "library of babel, Jorge Luis Borges, universal library">
+                                <meta charset="UTF-8">
+                                    </HEAD>
+    <BODY>
+        <div class = "searchcontainer2" style = "position: relative; top:75px;">
+            <DIV id ="divider" style="position: relative; top: 5px">
+                
+                <FORM id = "searcher" ACTION="/search1.html" METHOD=POST>
+                    <p class = "textsearch">Enter up to 3200 characters:<br><br><textarea style = "width: 300px; height: 125px; font-size:14px; font-family: Courier" maxlength="3200" id = "find" NAME="find" onkeypress = "submitter(event)" onkeyup="clearout()" autofocus></textarea></p>
+                        <p class = "textsearch" style = "width:500px; position: relative; margin-right: auto; margin-left: auto; top:-10px;" id = "advice">The library contains only lower-case letters, space, comma, and period.</p>
+                        <p id = "image" style = "text-align: center; position: relative;"><INPUT id = "button" style = "width: 100px; position: relative; top:-10px;" CLASS="btn" TYPE="submit" VALUE="Search" NAME="btnSubmit"><br><INPUT type="hidden" name="method" value="x"></p>
+                            </FORM>
+                
+                <p id = "link" style="position: relative; top:-10px; text-align: center; left:1px; font-size: 17; font-family: 'Courier',monospace"> <a style = "font-family: 'Courier', monospace" class = "intext" href = "https://libraryofbabel.info">Back to Portal</a></p>
+            </div>
+        </div>
+    </BODY>
+</HTML>

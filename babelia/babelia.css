@@ -1,0 +1,353 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a.intext {
+    color:#39F;
+}
+
+sup { vertical-align: top; font-size: 0.6em; position: relative; top: -0.5em; }
+
+h2 {
+    line-height: 125%;
+    font-family: "Georgia", "backup", serif;
+    font-size:21px;
+}
+
+hr {
+    color: #D4D4D4;
+    background-color: #D7D7D7;
+    border: 1px solid rgb(215, 215, 215);
+    height: 0px
+}
+
+p {
+    line-height: 135%;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left: 25px;
+    padding-right:25px;
+    text-align: justify;
+}
+
+p.incidental {
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left: 25px;
+    padding-right:25px;
+    text-align: justify;
+    font-size: 16px;
+    line-height:129%;
+}
+
+ul.index li {
+    list-style-type: none;
+    margin: 15px 0;
+    font-family: "Vollkorn", "Georgia", serif;
+    font-size:17pt;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9.5em;
+}
+
+div.slide {
+
+position: absolute;
+left: 50%;
+width: 641px;
+    margin-left: -320px;
+    top:175px;
+}
+
+div.search {
+    position: absolute;
+    left: 50%;
+    width: 28em;
+    margin-left: -14em;
+    top: 100px;
+    font-family: "Vollkorn", "Georgia", serif;
+    font-size: 13pt;
+    text-align: left;
+}
+
+div.searchresult {
+    position: absolute;
+    left: 50%;
+    width: 950px;
+    margin-left: -475px;
+    top:175px;
+    text-align:center;
+}
+
+div.portrait {
+    position: absolute;
+    left: 50%;
+    width: 650px;
+    margin-left: -325px;
+    top:50px;
+    text-align:center;
+}
+
+img.photo {
+    margin-left: auto;
+    margin-right:auto;
+}
+
+div.loca {
+    position:relative;
+    top:20px;
+    font-family: 'Vollkorn';
+    color: #DDD;
+    font-size:14pt;
+    text-align: center;
+}
+
+#navigator {
+    position: relative;
+    top:25px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 360px;
+}
+
+div.locator {
+    position:relative;
+    top:45px;
+    font-family: 'Vollkorn';
+    color: #DDD;
+    font-size:14pt;
+    text-align: center;
+}
+
+body.srchres {
+    background-color: #222;
+}
+
+img.box {
+    box-shadow: 2px 2px 2px 2px #333;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+div.aboutcont {
+    position: absolute;
+    left: 50%;
+    width: 975px;
+    margin-left: -487px;
+}
+
+div.leftlong2 {
+    font-family: 'Georgia', 'backup', serif;
+    font-size: 15px;
+    float:left;
+    margin-right: auto;
+    margin-top:0;
+    width: 500px;
+}
+div.leftlong {
+    font-family: 'Georgia', 'backup', serif;
+    font-size: 15px;
+    position: relative;
+    float:left;
+    left: 95px;
+    margin-right: auto;
+    margin-top:0;
+    width: 450px;
+}
+div.rightshort {
+    margin-right: 0;
+    float:left;
+    margin-left: auto;
+    font-size: 15px;
+    margin-top:0;
+    width: 475px;
+    text-align:center;
+}
+div.leftshort {
+    float:left;
+    margin-right: auto;
+    margin-top:0;
+    width: 425px;
+}
+div.rightlong {
+    font-family: 'Georgia', 'backup', serif;
+    margin-right: 0;
+    float:left;
+    font-size: 15px;
+    margin-left: auto;
+    margin-top:0;
+    width: 525px;
+}
+
+div.left {
+    font-family: 'Georgia', 'backup', serif;
+    font-size: 15px;
+    position: relative;
+    float:left;
+    margin-right: auto;
+    margin-top:0;
+    width: 500px;
+}
+div.right2 {
+    font-family: 'Georgia', 'backup', serif;
+    margin-right: 0;
+    float:left;
+    font-size: 15px;
+    margin-left: auto;
+    margin-top:0;
+    left:70px;
+    width: 400px;
+    position:relative;
+    top:660px;
+}
+
+div.right {
+    font-family: 'Georgia', 'backup', serif;
+    margin-right: 0;
+    float:left;
+    font-size: 15px;
+    margin-left: auto;
+    margin-top:0;
+    position: relative;
+    left:165px;
+    width: 300px;
+}
+h2.nudge {
+    position:relative;
+    top:-5px;
+}
+p.incidental2 {
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left: 25px;
+    padding-right:25px;
+    text-align: justify;
+    font-size: 16px;
+    line-height:129%;
+    position:relative;
+    top:-5px;
+}
+
+@media screen and (max-width:950px) {
+    div.aboutcont {
+        position: absolute;
+        left: 50%;
+        width: 900px;
+        margin-left: -450px;
+    }
+    div.leftlong2 {
+        font-family: 'Georgia', 'backup', serif;
+        font-size: 15px;
+        float:left;
+        margin-right: auto;
+        margin-top:0;
+        width: 450px;
+    }
+    div.rightshort {
+        margin-top:15px;
+        width: 450px;
+    }
+    p.gap {
+        display: none;
+    }
+    div.right {
+        left:125px;
+    }
+    div.leftlong {
+        left:70px
+    }
+    img.about {
+        width:450px;
+        height:575px;
+        position: relative;
+        top:50px
+    }
+    div.rightlong {
+        font-family: 'Georgia', 'backup', serif;
+        margin-right: 0;
+        float:left;
+        font-size: 15px;
+        margin-left: auto;
+        margin-top:0;
+        width: 450px;
+    }
+    .nudge {
+        top: 0;
+    }
+    div.left {
+        width: 475px;
+    }
+    div.right2 {
+        left:20px;
+        top:680px;
+    }
+}
+@media screen and (max-width:875px) {
+    div.aboutcont {
+        margin-left:0px;
+        left:0px;
+    }
+}
+
+@media screen and (max-height:825px) {
+    div.searchresult {
+        top:100px;
+    }
+}
+@media screen and (max-height:800px) {
+    div.portrait {
+        top:20px;
+    }
+}
+
+@media screen and (max-height:650px) {
+    div.searchresult {
+        top:50px;
+    }
+}
+
+@-moz-document url-prefix() {
+    p.incidental {
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left: 25px;
+        padding-right:25px;
+        text-align: justify;
+        font-size: 16px;
+        line-height:127%;
+    }
+}
+@media only screen and (max-device-width: 736px) {
+img.about {
+    position: relative;
+    top:200px;
+}
+img.about2 {
+    position:relative;
+    top:60px;
+}
+img.borges {
+    position: relative;
+    top:160px;
+}
+}
+
+@font-face {
+    font-family: "backup";
+    src: url(/Georgia.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "backup";
+    src: url(/4456.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "backup";
+    src: url(/4457.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
